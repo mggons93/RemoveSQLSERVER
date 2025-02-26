@@ -12,7 +12,7 @@ if (!(Test-Path $VHDPath)) {
 
     # Crear un archivo de script para diskpart
     $diskpartScript = @"
-create vdisk file="$VHDPath" maximum=8192 type=expandable
+create vdisk file="$VHDPath" maximum=30720 type=expandable
 select vdisk file="$VHDPath"
 attach vdisk
 convert gpt
